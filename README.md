@@ -4,6 +4,10 @@
 
 **[Download Batch Cutter 0.95](https://github.com/WaveboSF/Batch-Cutter/releases/tag/v0.95)**
 
+![Batch Cutter 0.95 on Linux: the empty window at the start](docs/images/batch-cutter-0.95.png)
+
+*Batch Cutter 0.95 on Linux - the empty window at the start.*
+
 | Platform | Download | Checksum |
 |---|---|---|
 | Windows 10/11, x64 | [Zip](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.95/Batch-Cutter-0.95-windows-x64.zip) | [SHA-256](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.95/Batch-Cutter-0.95-windows-x64.zip.sha256) |
@@ -24,5 +28,14 @@ Each download is one program file plus an optional install script for the curren
 ## Together with FFmpeg CC GUI
 
 Batch Cutter is the companion of **[FFmpeg CC GUI](https://github.com/WaveboSF/FFmpeg-Converter-GUI/releases/tag/v0.95)**, the ffmpeg converter from the same author: its **Batch Cutter** button starts the cutter on the Batch Folder or the Input File, and the cutter can hand its results back to the converter.
+
+## Contributors
+
+Batch Cutter is built and maintained by [S.F. / WaveboSF](https://github.com/WaveboSF),
+with plenty of help from **Anthropic Claude** and [**OpenAI Codex**](https://github.com/codex).
+These advanced coding tools are part of the daily toolbox—from turning ideas
+into code to tracking down stubborn bugs, testing and writing the docs. The
+maintainer sets the direction, decides what ships—and occasionally says,
+“No, that’s not what I meant,” because otherwise the cutter would proudly remove the good parts and keep the commercials.
 
 The public repository contains downloads, documentation and notices; the application source remains private. MIT licence (`LICENSE`); the licences of the built-in libraries are listed in `LICENSES/THIRD-PARTY-CRATES.txt`.
