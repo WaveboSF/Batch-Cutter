@@ -1,32 +1,37 @@
-# Batch Cutter 0.96
+# Batch Cutter 0.98
 
-**A lossless batch video cutter for Windows and Linux.** Mark a part in one reference file - with the picture, the stereo sound wave, mouse-wheel zoom and playback - then say what happens to it, and every checked file of the folder is cut at the same point. Nothing is decoded or re-encoded: every cut starts on a real keyframe of that file. Built for removing commercials from recordings.
+**A lossless batch video cutter for Windows and Linux.** Mark a stretch in one reference file - with the picture, the stereo sound wave, mouse-wheel zoom and playback - cut it out or copy it into a row of parts, and every checked file of the folder is cut the same way. Nothing is decoded or re-encoded: every cut starts on a real keyframe of that file. Built for removing commercials from recordings - and for putting scenes together in an order of your own.
 
-**[Download Batch Cutter 0.96](https://github.com/WaveboSF/Batch-Cutter/releases/tag/v0.96)**
+**[Download Batch Cutter 0.98](https://github.com/WaveboSF/Batch-Cutter/releases/tag/v0.98)**
 
-![Batch Cutter 0.96 on Linux: the empty window at the start](docs/images/batch-cutter-0.96.png)
+![Batch Cutter 0.98 on Linux: the empty window at the start](docs/images/batch-cutter-0.98.png)
 
-*Batch Cutter 0.96 on Linux - the empty window at the start.*
+*Batch Cutter 0.98 on Linux - the empty window at the start.*
 
 | Platform | Download | Checksum |
 |---|---|---|
-| Windows 10/11, x64 | [Zip](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.96/Batch-Cutter-0.96-windows-x64.zip) | [SHA-256](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.96/Batch-Cutter-0.96-windows-x64.zip.sha256) |
-| Linux, x86-64, glibc 2.43+ | [Archive](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.96/Batch-Cutter-0.96-linux-x86_64.tar.gz) | [SHA-256](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.96/Batch-Cutter-0.96-linux-x86_64.tar.gz.sha256) |
+| Windows 10/11, x64 | [Zip](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.98/Batch-Cutter-0.98-windows-x64.zip) | [SHA-256](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.98/Batch-Cutter-0.98-windows-x64.zip.sha256) |
+| Linux, x86-64, glibc 2.43+ | [Archive](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.98/Batch-Cutter-0.98-linux-x86_64.tar.gz) | [SHA-256](https://github.com/WaveboSF/Batch-Cutter/releases/download/v0.98/Batch-Cutter-0.98-linux-x86_64.tar.gz.sha256) |
 
 Each download is one program file plus an optional install script for the current user, the icon and the licence notices.
 
 ## What it does
 
-- Choose one file as the reference, mark a part on it and say what happens to it - **Keep**, **Delete**, or **Save** as a file of its own - and every checked file of the folder is cut at the same point; the result takes the original's name and the original is kept as `A_org.mkv`.
-- Up to 10 parts per file, each with its own action; marks can be found by picture; sound tracks and subtitles can be left out; a run can be taken back.
+- Choose one file as the reference and mark a stretch on it. **Delete (D)** cuts it out - the gap closes, the timeline always shows the result - and **Add (A)** copies it into the row of the parts. **Start batch cut** writes every checked file the same way; the result takes the original's name and the original is kept as `A_org.mkv`.
+- **Start parts export** writes the green parts of the row in the order you put them in - as one video (`A_parts.mkv`) or each as a file of its own.
+- A part can be put into the video again at another place, also several times; marks can be found by picture; sound tracks and subtitles can be left out; a run can be taken back.
 - Lossless: no re-encoding, so a cut is as fast as a copy.
 
-## New in 0.96
+## New in 0.98
 
-- **Mark, then say what happens.** *Mark In (I)* and *Mark Out (O)* only mark; *Keep (K)*, *Delete (Del)* and *Save (S)* turn what is marked into a part - green is kept, red is cut out and the rest joined, blue is written as a file of its own (`A_part2.mkv`).
-- **A ruler above the sound wave** with the times, the parts as coloured bands, and **markers**: M sets one, Shift+M and Ctrl+Shift+M go to the next and the one before.
-- **Marking with the mouse:** a drag over the sound wave marks In and Out in one go; a mark is dragged alone and stops before the other one; the grey bar in the ruler moves one end, or all of what is marked.
-- **Only the reference file is ticked** when a folder is opened, and what is ticked has a colour.
+- **Delete (D) really cuts out, Add (A) copies.** What is cut out leaves the timeline and the gap closes; a red line marks the cut, and the stretch stands in the row of the parts in red. Add puts a green copy there and leaves the video as it is.
+- **The row of the parts:** a click chooses a part and Space plays it, a double click selects it for the export, a drag puts it at another place of the row. The right button puts a part into the video again (at the playhead, at a cut, several times), puts it back where it was, or turns red into green and green into red.
+- **Start parts export** writes the selected green parts in the order of the row - one video or one file each. Beside each input the row stays after Start batch cut, and the parts are read from the kept original.
+- **Playing over a cut** shows what the result will have there; Shift+K plays around a cut; a click on the picture plays and stops.
+- **The right button on the timeline** opens a menu of what it hit - what is marked, a cut, a marker or the ground.
+- **M switches the sound** (the marker key is N now); Del and Ins do what D and A do.
+- A cleaner window: Mark In and Mark Out side by side, no line of text between the buttons and the parts; what is rounded to keyframes stands behind ".ext" in Output options, what is to be said over the picture for a few seconds.
+- Presets saved with 0.95 to 0.97 are read.
 
 ## Requirements
 
@@ -34,7 +39,7 @@ Each download is one program file plus an optional install script for the curren
 
 ## Together with FFmpeg CC GUI
 
-Batch Cutter is the companion of **[FFmpeg CC GUI](https://github.com/WaveboSF/FFmpeg-CC-GUI/releases/tag/v0.95)**, the ffmpeg converter from the same author: its **Batch Cutter** button starts the cutter on the Batch Folder or the Input File, and the cutter can hand its results back to the converter.
+Batch Cutter is the companion of **[FFmpeg CC GUI](https://github.com/WaveboSF/FFmpeg-CC-GUI/releases/latest)**, the ffmpeg converter from the same author: its **Batch Cutter** button starts the cutter on the Batch Folder or the Input File, and the cutter can hand its results back to the converter.
 
 ## Contributors
 
